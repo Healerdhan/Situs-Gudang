@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: laravel-app
+        container_name: laravel-app
+        ports:
+            - "8000:80"
+        volumes:
+            - .:/var/www/html
+        environment:
+            - APP_ENV=local
+            - APP_DEBUG=true
+            - APP_KEY=base64:GENERATE_YOUR_APP_KEY
+        depends_on:
+            - db
+
+    db:
+        image: mysql:8.0
+        container_name: mysql
+        ports:
+            - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: situs-gudang
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+        volumes:
+            - dbdata:/var/lib/mysql
+
+volumes:
+    dbdata:
