@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "76d16fdd-84ba-4993-b17b-f48e23bc92d6",
+		"name": "Sistem-Gudang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32833400",
+		"_collection_link": "https://restless-desert-868425.postman.co/workspace/My-Workspace~1bbf94af-3dc7-48a5-8567-231a5bc25dcc/collection/32833400-76d16fdd-84ba-4993-b17b-f48e23bc92d6?action=share&source=collection_link&creator=32833400"
+	},
+	"item": [
+		{
+			"name": "barang",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjk4NzYvYXBpL2xvZ2luIiwiaWF0IjoxNzI0MzIyMTUwLCJleHAiOjE3MjQzMjU3NTAsIm5iZiI6MTcyNDMyMjE1MCwianRpIjoiNUJ2aHh3QUNTbGZ6YWkwMiIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HisQoj2gMrcLiLbLW2_jrc58P6P6HKieBZTzAG5ivxs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/barang",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"barang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/barang/230af108-f240-49c8-8f25-2dbfe31cdb49",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"barang",
+								"230af108-f240-49c8-8f25-2dbfe31cdb49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_barang\" : \"obat-obatn\",\r\n    \"kode\" : \"2112321\",\r\n    \"kategori\" : \"luka luar\",\r\n    \"lokasi\" : \"tanjung\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/barang",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"barang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1dce2a84-2aaf-4a24-be6a-e54e66a9da0f\",\r\n    \"nama_barang\" : \"makanan\",\r\n    \"kode\" : \"0009890\",\r\n    \"kategori\" : \"snack\",\r\n    \"lokasi\" : \"surabaya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/barang/1dce2a84-2aaf-4a24-be6a-e54e66a9da0f",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"barang",
+								"1dce2a84-2aaf-4a24-be6a-e54e66a9da0f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/barang/230af108-f240-49c8-8f25-2dbfe31cdb49",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"barang",
+								"230af108-f240-49c8-8f25-2dbfe31cdb49"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "index user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/users",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{me}}/users/4",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"da\",\r\n    \"email\": \"daa20@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/users",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\": \"healer\",\r\n    \"email\": \"healer@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/users/4",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/users/5",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"healer\",\r\n    \"email\": \"healer@gmail.com\",\r\n    \"password\": \"rahasia123\",\r\n    \"password_confirmation\": \"rahasia123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/register",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"healer\",\r\n    \"email\": \"healer@gmail.com\",\r\n    \"password\": \"rahasia123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/login",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log out",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjk4NzYvYXBpL2xvZ2luIiwiaWF0IjoxNzI0MzIyMTUwLCJleHAiOjE3MjQzMjU3NTAsIm5iZiI6MTcyNDMyMjE1MCwianRpIjoiNUJ2aHh3QUNTbGZ6YWkwMiIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HisQoj2gMrcLiLbLW2_jrc58P6P6HKieBZTzAG5ivxs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/logout",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mutasi",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/mutasi",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/mutasi/2",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tanggal\": \"2024-08-23\",\r\n    \"jenis_mutasi\": \"penambahan\",\r\n    \"jumlah\": 10,\r\n    \"user_id\": 1,\r\n    \"barang_id\": \"78f41477-aec2-457c-9150-10201247bf30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/mutasi",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tanggal\": \"2024-08-29\",\r\n    \"jenis_mutasi\": \"ngoncol\",\r\n    \"jumlah\": 1,\r\n    \"user_id\": 2,\r\n    \"barang_id\": \"78f41477-aec2-457c-9150-10201247bf30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{me}}/mutasi/1",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/mutasi/2",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/mutasi/user/1",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "barang",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{me}}/mutasi/barang/78f41477-aec2-457c-9150-10201247bf30",
+							"host": [
+								"{{me}}"
+							],
+							"path": [
+								"mutasi",
+								"barang",
+								"78f41477-aec2-457c-9150-10201247bf30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
